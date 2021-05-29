@@ -28,7 +28,7 @@ class Client
       loop do
         puts @socket.gets
       end
-    end.join
+    end
   end
 end
 

@@ -25,7 +25,7 @@ class Server
     loop do
       message = client_conn.gets
 
-      @client.each do |id, conn|
+      @clients.each do |id, conn|
         next if id == client_id
         conn.puts "#{client_id}: #{message}"
       end
